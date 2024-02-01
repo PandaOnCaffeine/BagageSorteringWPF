@@ -1,0 +1,53 @@
+﻿<Window x:Class="BagageSorteringWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BagageSorteringWPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="1080" Width="1920"
+        WindowState="Maximized">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="350"/>
+            <!-- Column 0 -->
+            <ColumnDefinition Width="350"/>
+            <!-- Column 1 -->
+            <ColumnDefinition Width="350"/>
+            <!-- Column 2 -->
+            <ColumnDefinition Width="250"/>
+
+            <ColumnDefinition Width="Auto"/>
+            <!-- Add more ColumnDefinitions if needed -->
+        </Grid.ColumnDefinitions>
+
+        <StackPanel x:Name="CheckInsStackPanel" Grid.Column="0">
+            <!--<TextBox x:Name="CheckInBox1" Margin="10" Text="{Binding TestCount, Mode=OneWay}"/>-->
+        </StackPanel>
+        <StackPanel x:Name="SortingStackPanel" Grid.Column="1">
+            <!--<TextBox x:Name="SortingBox" Margin="10" Text="{Binding TestCount, Mode=OneWay}"/>-->
+        </StackPanel>
+        <StackPanel x:Name="GateStackPanel" Grid.Column="2">
+            <!--<TextBox x:Name="GateBox1" Margin="10" Text="{Binding TestCount, Mode=OneWay}"/>-->
+        </StackPanel>
+        <StackPanel x:Name="MenuStackPanel" Grid.Column="3">
+            <Button Content="Add New CheckIn" Click="AddCheckInButtonClick"></Button>
+            <Button Content="Remove New CheckIn" Click="RemoveCheckInButtonClick"></Button>
+            <Button Content="Add New Gate" Click="AddGateButtonClick"></Button>
+        </StackPanel>
+    </Grid>
+    <!--<Grid x:Name="mainGrid" Width="250" Height="200" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+
+        <TextBlock Text="CheckIn1" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18" Margin="0,0,0,10"/>
+        <DataGrid Grid.Row="1" ItemsSource="{Binding RowData}" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Rows" Binding="{Binding}" />
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>-->
+</Window>
